@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Name that d*#n colo(u)r</title>
+  <link href="https://fonts.googleapis.com/css?family=Anaheim" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="div1">
+    <div class="button-box">
+      <div id="start">
+        <button type="button" name="start" onclick="start(2)">easy</button>
+        <button type="button" name="start" onclick="start(4)">medium</button>
+        <button type="button" name="start" onclick="start(6)">hard</button>
+        <button type="button" name="start" onclick="start(6, 'insane')">insane</button>
+      </div>
+      <div class="center_text hidden" id="buttonArray">
+
+      </div>
+    </div>
+    <div class="sidebar" onclick="toggleSidebar()">
+      <span class="arrow left">
+
+      </span>
+      <div class="container hidden">
+        <div class="scores">
+          <h1>Score</h1>
+          <span class="score">0</span>
+        </div>
+
+        <div onclick="hideStreak(event)" class="toggler">
+          <p>Last 5</p>
+          <div class="streak">
+          </div>
+
+          <div class="highscore">
+            <h1>Highscore</h1>
+            <ol class="highscore-list">
+
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.js" charset="utf-8"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+</body>
+</html>

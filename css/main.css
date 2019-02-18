@@ -1,0 +1,176 @@
+body {
+  font-family: 'Anaheim', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: darkslategray;
+}
+
+.sidebar {
+  height: 100%;
+  min-width: 2rem;
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-left: 1em;
+}
+
+.container {
+  width: 15rem;
+}
+
+.square1, .square2 {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid darkgray;
+  content: '';
+  /* box-shadow: 2px 2px 4px darkgray; */
+  margin-bottom: -6px;
+  float: right;
+}
+
+[name=start] {
+  display: block;
+  /* border: none; */
+  /* background-color: white; */
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+
+}
+
+.div1 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0)
+}
+
+.button-box {
+  min-width: 30vw;
+  min-height: 30vh;
+  /* background: white;
+  border: 1px solid black;
+  box-shadow: 2px 2px 4px black; */
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; */
+}
+
+.center_text {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: 'Anaheim', sans-serif;
+  text-transform: lowercase;
+  font-size: 1.5em;
+  border: 2px solid white;
+  border-radius: 25px;
+  margin-bottom: .5em;
+  /* color: white; */
+  /* background-color: transparent; */
+  box-shadow: 2px 2px 4px black;
+}
+
+button:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.streak {
+  font-size: 1.3em;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.highscore {
+  position: absolute;
+  bottom: 0
+}
+
+.correct {
+  color: lightgreen;
+}
+
+.wrong {
+  color: red;
+  text-decoration: line-through;
+}
+
+.scores {
+  text-align: center;
+}
+
+.score {
+  text-align: center;
+  font-size: 3em;
+  font-family: 'Neucha', cursive;
+
+}
+
+.toggler {
+  cursor: pointer;
+}
+
+.streak ul {
+  list-style: none;
+}
+
+.arrow {
+	position: absolute;
+	top: 50%;
+	width: 3vmin;
+	height: 3vmin;
+	background: transparent;
+	border-top: 1vmin solid slategrey;
+	border-right: 1vmin solid slategrey;
+	box-shadow: 0 0 0 lightgray;
+	transition: all 200ms ease;
+}
+.left {
+		left: 0;
+		transform: translate3d(0,-50%,0) rotate(-135deg);
+	}
+
+
+	.arrow:hover {
+		border-color: orange;
+		box-shadow: 0.5vmin -0.5vmin 0 slategrey;
+	}
+
+	.arrow:before { // for better hit area
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-40%,-60%) rotate(45deg);
+		width: 200%;
+		height: 200%;
+	}
+}
+
+@media (min-width: 30em) {
+  button {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 30em) {
+  .scores h1 {
+    font-size: 1.5rem;
+  }
+
+  .score {
+    font-size: 1.5rem;
+  }
+}
